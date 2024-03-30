@@ -119,7 +119,7 @@ body {
           border-bottom-right-radius: 0;
           font-weight: 700;
           font-size: 30px; }
-          @media (max-width: 375px) {
+          @media (max-width: 767px) {
             .page .container > div .progress .the-progress span:nth-of-type(2) {
               top: 45px;
               left: 50%;
