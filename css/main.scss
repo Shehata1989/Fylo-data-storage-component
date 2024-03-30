@@ -1,0 +1,164 @@
+@import "./sass/_global-rules.scss";
+
+@mixin Gradient {
+}
+@mixin media($point) {
+  @if $point == mobile {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+}
+
+body {
+  background-color: hsl(229, 57%, 11%);
+}
+
+.page {
+  @include media(mobile) {
+    background: url("/images/bg-mobile.png") no-repeat;
+    background-size: cover;
+  }
+  background: url("/images/bg-desktop.png") no-repeat bottom center;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    > div {
+      @include media(mobile) {
+        flex-direction: column;
+      }
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      .fylo {
+        @include media(mobile) {
+          width: 100%;
+        }
+        display: block;
+        max-width: 320px;
+        background-color: hsl(228, 56%, 26%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        border-top-right-radius: 80px;
+        .info {
+          margin-bottom: 30px;
+        }
+        .icons {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 5px;
+          div {
+            width: 55px;
+            height: 55px;
+            background-color: hsl(229, 57%, 11%);
+            padding: 15px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+          }
+        }
+      }
+      .progress {
+        flex: 1;
+        background-color: hsl(228, 56%, 26%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        p {
+          color: hsl(229, 7%, 55%);
+          margin: 0 0 10px;
+          span {
+            color: white;
+          }
+        }
+        .the-progress {
+          width: 100%;
+          height: 10px;
+          background-color: hsl(229, 57%, 11%);
+          border-radius: 10px;
+          position: relative;
+          span[style="width: 80%"] {
+            position: absolute;
+            height: 100%;
+            border-radius: 10px;
+            background-image: linear-gradient(
+              to right,
+              hsl(6, 100%, 80%),
+              hsl(335, 100%, 65%)
+            );
+            z-index: 1;
+            &::before {
+              content: "";
+              position: absolute;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              background-color: white;
+              right: 2px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+          span:nth-of-type(2) {
+            position: absolute;
+            width: 125px;
+            right: 0;
+            top: -135px;
+            background-color: white;
+            padding: 15px 20px;
+            color: black;
+            border-radius: 10px;
+            border-bottom-right-radius: 0;
+            font-weight: 700;
+            font-size: 30px;
+            @include media(mobile) {
+              top: 45px;
+              left: 50%;
+              transform: translateX(-50%);
+              font-size: 25px;
+              padding: 15px 10px;
+              border-bottom-right-radius: 10px;
+            }
+            &::before {
+              @include media(mobile) {
+                display: none;
+              }
+              content: "";
+              position: absolute;
+              border-width: 20px 0 0 20px;
+              border-style: solid;
+              border-color: hsl(243, 100%, 93%) transparent transparent;
+              bottom: -20px;
+              right: 0;
+            }
+            span {
+              @include media(mobile) {
+                font-size: 12px;
+              }
+              font-size: 14px;
+              text-transform: uppercase;
+              color: hsl(229, 7%, 55%);
+            }
+          }
+        }
+        .size {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+          span {
+          }
+        }
+      }
+    }
+  }
+}
