@@ -28,43 +28,43 @@ body {
 
 .page {
   background: url("../images/bg-desktop.png") no-repeat bottom center;
-  background-size: 100%;
+  background-size: 100vw 50vh;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
   @media (max-width: 767px) {
     .page {
-      background: url("../images/bg-mobile.png") no-repeat;
-      background-size: cover; } }
-  .page .container > div {
-    width: 100%;
+      background: url("../images/bg-mobile.png") no-repeat bottom center;
+      background-size: 100vw 100vh; } }
+  .page > main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: end;
+    width: 95%;
     gap: 40px; }
     @media (max-width: 767px) {
-      .page .container > div {
+      .page > main {
         flex-direction: column; } }
-    .page .container > div .fylo {
-      display: block;
-      max-width: 320px;
+    .page > main .fylo {
+      width: 100%;
+      max-width: 300px;
       background-color: #1d2c67;
       color: white;
       padding: 30px;
       border-radius: 10px;
-      border-top-right-radius: 80px; }
+      border-top-right-radius: 120px; }
       @media (max-width: 767px) {
-        .page .container > div .fylo {
-          width: 100%; } }
-      .page .container > div .fylo .info {
+        .page > main .fylo {
+          min-width: 100%; } }
+      .page > main .fylo .info {
         margin-bottom: 30px; }
-      .page .container > div .fylo .icons {
+      .page > main .fylo .icons {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 5px; }
-        .page .container > div .fylo .icons div {
+        .page > main .fylo .icons div {
           width: 55px;
           height: 55px;
           background-color: #0c122c;
@@ -74,30 +74,36 @@ body {
           justify-content: center;
           align-items: center;
           border-radius: 8px; }
-    .page .container > div .progress {
-      flex: 1;
+    .page > main .progress {
       background-color: #1d2c67;
+      width: 100%;
+      max-width: 500px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
       color: white;
       padding: 30px;
       border-radius: 10px; }
-      .page .container > div .progress p {
+      @media (max-width: 767px) {
+        .page > main .progress {
+          min-width: 100%; } }
+      .page > main .progress p {
         color: #848794;
         margin: 0 0 10px; }
-        .page .container > div .progress p span {
+        .page > main .progress p span {
           color: white; }
-      .page .container > div .progress .the-progress {
-        width: 100%;
+      .page > main .progress .the-progress {
         height: 10px;
         background-color: #0c122c;
         border-radius: 10px;
         position: relative; }
-        .page .container > div .progress .the-progress span[style="width: 80%"] {
+        .page > main .progress .the-progress span[style="width: 80%"] {
           position: absolute;
           height: 100%;
           border-radius: 10px;
           background-image: linear-gradient(to right, #ffa399, #ff4d97);
           z-index: 1; }
-          .page .container > div .progress .the-progress span[style="width: 80%"]::before {
+          .page > main .progress .the-progress span[style="width: 80%"]::before {
             content: "";
             position: absolute;
             height: 8px;
@@ -107,27 +113,26 @@ body {
             right: 2px;
             top: 50%;
             transform: translateY(-50%); }
-        .page .container > div .progress .the-progress span:nth-of-type(2) {
+        .page > main .progress .the-progress span:nth-of-type(2) {
           position: absolute;
-          width: 125px;
           right: 0;
-          top: -135px;
+          top: -110px;
           background-color: white;
           padding: 15px 20px;
           color: black;
           border-radius: 10px;
           border-bottom-right-radius: 0;
-          font-weight: 700;
-          font-size: 30px; }
+          font-weight: 600;
+          font-size: 35px; }
           @media (max-width: 767px) {
-            .page .container > div .progress .the-progress span:nth-of-type(2) {
+            .page > main .progress .the-progress span:nth-of-type(2) {
               top: 45px;
               left: 50%;
               transform: translateX(-50%);
               font-size: 25px;
               padding: 15px 10px;
               border-bottom-right-radius: 10px; } }
-          .page .container > div .progress .the-progress span:nth-of-type(2)::before {
+          .page > main .progress .the-progress span:nth-of-type(2)::before {
             content: "";
             position: absolute;
             border-width: 20px 0 0 20px;
@@ -136,16 +141,17 @@ body {
             bottom: -20px;
             right: 0; }
             @media (max-width: 767px) {
-              .page .container > div .progress .the-progress span:nth-of-type(2)::before {
+              .page > main .progress .the-progress span:nth-of-type(2)::before {
                 display: none; } }
-          .page .container > div .progress .the-progress span:nth-of-type(2) span {
-            font-size: 14px;
+          .page > main .progress .the-progress span:nth-of-type(2) span {
+            font-size: 13px;
             text-transform: uppercase;
-            color: #848794; }
+            color: #848794;
+            font-weight: 500; }
             @media (max-width: 767px) {
-              .page .container > div .progress .the-progress span:nth-of-type(2) span {
+              .page > main .progress .the-progress span:nth-of-type(2) span {
                 font-size: 12px; } }
-      .page .container > div .progress .size {
+      .page > main .progress .size {
         display: flex;
         justify-content: space-between;
         align-items: center;
