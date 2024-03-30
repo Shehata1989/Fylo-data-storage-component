@@ -59,6 +59,8 @@ body {
           min-width: 100%; } }
       .page > main .fylo .info {
         margin-bottom: 30px; }
+        .page > main .fylo .info svg {
+          max-width: 100%; }
       .page > main .fylo .icons {
         display: flex;
         justify-content: flex-start;
@@ -126,6 +128,8 @@ body {
           font-size: 35px; }
           @media (max-width: 767px) {
             .page > main .progress .the-progress span:nth-of-type(2) {
+              width: 100%;
+              max-width: 120px;
               top: 45px;
               left: 50%;
               transform: translateX(-50%);

@@ -47,6 +47,9 @@ body {
       border-top-right-radius: 120px;
       .info {
         margin-bottom: 30px;
+        svg {
+          max-width: 100%;
+        }
       }
       .icons {
         display: flex;
@@ -115,7 +118,6 @@ body {
         }
         span:nth-of-type(2) {
           position: absolute;
-          // width: 125px;
           right: 0;
           top: -110px;
           background-color: white;
@@ -126,6 +128,8 @@ body {
           font-weight: 600;
           font-size: 35px;
           @include media(mobile) {
+            width: 100%;
+            max-width: 120px;
             top: 45px;
             left: 50%;
             transform: translateX(-50%);
