@@ -16,10 +16,10 @@ body {
 
 .page {
   @include media(mobile) {
-    background: url("images/bg-mobile.png") no-repeat;
+    background: url("../images/bg-mobile.png") no-repeat;
     background-size: cover;
   }
-  background: url("images/bg-desktop.png") no-repeat bottom center;
+  background: url("../images/bg-desktop.png") no-repeat bottom center;
   background-size: 100%;
   min-height: 100vh;
   display: flex;
