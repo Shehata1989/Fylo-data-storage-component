@@ -45,6 +45,8 @@ body {
       padding: 30px;
       border-radius: 10px;
       border-top-right-radius: 120px;
+      transition-duration: .35s;
+      transition-timing-function: linear;
       .info {
         margin-bottom: 30px;
         svg {
@@ -82,6 +84,8 @@ body {
       color: white;
       padding: 30px;
       border-radius: 10px;
+      transition-duration: .35s;
+      transition-timing-function: linear;
       p {
         color: hsl(229, 7%, 55%);
         margin: 0 0 10px;

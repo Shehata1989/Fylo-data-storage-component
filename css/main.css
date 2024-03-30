@@ -53,7 +53,9 @@ body {
       color: white;
       padding: 30px;
       border-radius: 10px;
-      border-top-right-radius: 120px; }
+      border-top-right-radius: 120px;
+      transition-duration: .35s;
+      transition-timing-function: linear; }
       @media (max-width: 767px) {
         .page > main .fylo {
           min-width: 100%; } }
@@ -85,7 +87,9 @@ body {
       flex-direction: column;
       color: white;
       padding: 30px;
-      border-radius: 10px; }
+      border-radius: 10px;
+      transition-duration: .35s;
+      transition-timing-function: linear; }
       @media (max-width: 767px) {
         .page > main .progress {
           min-width: 100%; } }
