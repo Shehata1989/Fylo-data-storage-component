@@ -27,7 +27,7 @@ body {
   background-color: #0c122c; }
 
 .page {
-  background: url("/images/bg-desktop.png") no-repeat bottom center;
+  background: url("images/bg-desktop.png") no-repeat bottom center;
   background-size: 100%;
   min-height: 100vh;
   display: flex;
@@ -35,7 +35,7 @@ body {
   align-items: center; }
   @media (max-width: 375px) {
     .page {
-      background: url("/images/bg-mobile.png") no-repeat;
+      background: url("images/bg-mobile.png") no-repeat;
       background-size: cover; } }
   .page .container > div {
     width: 100%;
